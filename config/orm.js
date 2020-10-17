@@ -12,6 +12,7 @@ const orm = {
       cb(result);
     });
   },
+  
   insertOne: (table, newRowData, cb) => {
     const queryString = "INSERT INTO ?? SET ?";
     const values = [table, newRowData];
