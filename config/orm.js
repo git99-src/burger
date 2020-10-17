@@ -12,7 +12,7 @@ const orm = {
       cb(result);
     });
   },
-  
+
   insertOne: (table, newRowData, cb) => {
     const queryString = "INSERT INTO ?? SET ?";
     const values = [table, newRowData];
@@ -25,13 +25,12 @@ const orm = {
     });
   },
 
-  // Example of updateValues: { name: "panther", sleepy: true }
+  
   // Example of condition: { id: 1 }
   updateOne: (table, updateValues, condition, cb) => {
     const queryString = "UPDATE ?? SET ? WHERE ? LIMIT 1";
     const values = [table, updateValues, condition];
 
-    console.log(queryString);
     connection.query(queryString, values, (err, result) => {
       if (err) {
         throw err;

@@ -2,7 +2,7 @@
 $(() => {
     $(".change-devour").on("click", function () {
       const id = $(this).data("id");
-      const newBurger = $(this).data("newBurger");
+      const newBurger = $(this).data("newdevour");
   
       const newBurgerState = { value: newBurger };
   
