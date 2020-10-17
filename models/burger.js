@@ -7,13 +7,18 @@ const burger = {
       cb(res);
     });
   },
-
+  // updateOne -
+  // parm 1: burgers (table)
+  // parm 2: devoured: true 
+  // parm 3: id of burger
   update: (burgerData, criteria, cb) => {
     orm.updateOne("burgers", burgerData, criteria, (res) => {
       cb(res);
     });
   },
-    // The variables cols and vals are arrays.
+    // insertOne -
+    // parm 1: burgers (table)
+    // parm 2: burger_name 
     create: (newBurger, cb) => {
       orm.insertOne("burgers", newBurger, (res) => {
         cb(res);

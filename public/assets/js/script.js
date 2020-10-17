@@ -26,8 +26,7 @@ $(() => {
       const newBurger = {
         name: $("#daburger").val().trim(),
       };
-  
-      // Send the POST request.
+      // Send the POST request
       $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger,

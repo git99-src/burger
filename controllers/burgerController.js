@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
     res.render("index", burgerObject);
   });
 });
-
+// post route used to add a burger from text in "name" field
 router.post("/api/burgers", (req, res) => {
   burger.create({ burger_name: req.body.name }, (result) => {
     // Send back the ID of the burger
@@ -23,7 +23,8 @@ router.post("/api/burgers", (req, res) => {
   });
 });
 
-// change the value of devoured to true 
+// change the value of devoured - will make it (true) 
+// using the id of the burger
 router.put("/api/burgers/:id/devoured", (req, res) => {
   const condition = { id: req.params.id };
   const update = { devoured: req.body.value };

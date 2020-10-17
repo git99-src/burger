@@ -25,8 +25,6 @@ const orm = {
     });
   },
 
-  
-  // Example of condition: { id: 1 }
   updateOne: (table, updateValues, condition, cb) => {
     const queryString = "UPDATE ?? SET ? WHERE ? LIMIT 1";
     const values = [table, updateValues, condition];
